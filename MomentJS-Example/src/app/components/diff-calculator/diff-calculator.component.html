@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-header>
+    Moment and Durations
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        Date1: {{date1.format('LLL')}}
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="setDate1($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item>
+        Date2: {{date2.format('LLL')}}
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="Choose a date" (dateChange)="setDate2($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2 [startAt]="date1.toDate()"></mat-datepicker>
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item>Diff: {{diff}}</mat-list-item>
+      <mat-list-item>Diff in seconds: {{diffInSeconds}}</mat-list-item>
+      <mat-list-item>Diff in minutes: {{diffInMinutes}}</mat-list-item>
+      <mat-list-item>Diff in hours: {{diffInHours}}</mat-list-item>
+      <mat-list-item>Diff in days: {{diffInDays}}</mat-list-item>
+      <mat-list-item>Diff in weeks: {{diffInWeeks}}</mat-list-item>
+      <mat-list-item>Diff in months: {{diffInMonths}}</mat-list-item>
+      <mat-list-item>Diff in years: {{diffInYear}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

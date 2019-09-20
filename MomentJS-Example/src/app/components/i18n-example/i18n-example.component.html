@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-title>Moment and i18n</mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Pick a different locale</mat-label>
+      <mat-select (valueChange)="updateLocale($event)">
+        <mat-option *ngFor="let loc of locales" [value]="loc.locale">
+          {{loc.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>Current locale: {{locale}}</p>
+    <p>Days: {{weekdays}}</p>
+    <mat-list>
+      <mat-list-item>
+        {{now}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('LT')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('LTS')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('L')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('l')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('LL')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('ll')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('LLL')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('lll')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('LLLL')}}
+      </mat-list-item>
+      <mat-list-item>
+        {{now.format('llll')}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>
+
