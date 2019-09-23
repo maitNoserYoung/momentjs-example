@@ -14,6 +14,13 @@ export class I18nExampleComponent implements OnInit {
   locale: string;
   locales: ILocale[];
   weekdays: string[];
+  birthday = moment("2000-01-01");
+
+  date1 = moment('2019-07-21');
+  date2 = moment('2019-09-21');
+  date3 = moment('1998-07-21');
+  date4 = moment('2019-09-24');
+  date5 = moment('1998-07-21');
 
   constructor() {
   }
@@ -34,7 +41,8 @@ export class I18nExampleComponent implements OnInit {
       {locale: 'pt-BR', name: 'Portuguese, Brazil'},
       {locale: 'sv', name: 'Swedish, Sweden'},
       {locale: 'nb-NO', name: 'Norwegian, Norway'},
-      {locale: 'ar-SA', name: 'Arabic, Saudi Arabia'}
+      {locale: 'ar-SA', name: 'Arabic, Saudi Arabia'},
+      {locale: 'zh-CN', name: 'Mandarin, China'}
     ];
     console.log('Application locale', this.applicationLocale);
     this.locale = this.applicationLocale !== undefined ? this.applicationLocale : this.locales[0].locale;

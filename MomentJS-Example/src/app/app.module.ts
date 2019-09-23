@@ -19,7 +19,7 @@ registerLocaleData(localeDeCh, 'de-CH');
     AppComponent,
     I18nExampleComponent,
     MainPageComponent,
-    DiffCalculatorComponent
+    DiffCalculatorComponent,
   ],
   imports: [
     BrowserModule,

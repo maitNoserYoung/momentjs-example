@@ -45,6 +45,27 @@
       <mat-list-item>
         {{now.format('llll')}}
       </mat-list-item>
+      <mat-list-item>
+        {{now.to(birthday)}}
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>
+        <p>{{date1 | since}}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <p>{{date2 | since}}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <p>{{date3 | since}}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <p>{{date4 | since}}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <p>{{date5 | since}}</p>
+      </mat-list-item>
     </mat-list>
   </mat-card-content>
   <mat-card-actions>
